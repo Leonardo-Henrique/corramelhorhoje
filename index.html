@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <!--
+    ============================================================
+    CONFIG (Corra Melhor Hoje · "Do Zero aos 10 km")
+    ------------------------------------------------------------
+    CHECKOUT_URL = https://pay.hotmart.com/P108588927X
+    PRICE        = R$ 27
+    PRICE_FULL   = R$ 37
+    SHOW_ANCHOR  = true   (only show "de R$ 37" if the price really goes up to R$ 37
+                           after the launch. Fake anchoring is illegal under Brazilian
+                           consumer law)
+    TIKTOK_URL   = https://www.tiktok.com/@corramelhorhoje
+    INSTAGRAM_URL= https://www.instagram.com/corramelhorhoje
+    YOUTUBE_URL  = https://www.youtube.com/@corramelhorhoje
+
+    >>> TO CHANGE PRICE / CHECKOUT / LINKS: edit ONLY the `window.CONFIG` object in
+        the <script> right below in <head>. Every button, price and link on the page
+        is filled from it. (The hrefs/prices written in the HTML are just fallbacks
+        for the rare visitor with JavaScript turned off.)
+    ============================================================
+  -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Do Zero aos 10 km · Guia de corrida com 3 planos | Corra Melhor Hoje</title>
+  <meta name="description" content="E-book Do Zero aos 10 km: 3 planos semana a semana pra correr 5 km sem parar, fazer 5 km em 30 minutos e chegar nos 10 km, sem se machucar. PDF na hora, garantia de 7 dias.">
+  <meta name="theme-color" content="#121318">
+
+  <script>
+    /* ===== EDIT HERE: the one place for price, checkout and links ===== */
+    window.CONFIG = {
+      CHECKOUT_URL:  "https://pay.hotmart.com/P108588927X",
+      PRICE:         "R$ 27",
+      PRICE_FULL:    "R$ 37",
+      SHOW_ANCHOR:   true,
+      TIKTOK_URL:    "https://www.tiktok.com/@corramelhorhoje",
+      INSTAGRAM_URL: "https://www.instagram.com/corramelhorhoje",
+      YOUTUBE_URL:   "https://www.youtube.com/@corramelhorhoje"
+    };
+    /* ================================================================== */
+    document.documentElement.className = "js" + (window.CONFIG.SHOW_ANCHOR ? "" : " no-anchor");
+  </script>
+
+  <link rel="preload" href="assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Inter 400 is intentionally NOT preloaded: it competes with the hero image (the LCP element) on slow 4G; text shows instantly with font-display: swap. -->
+  <link rel="preload" href="assets/ebook/ebook-mockup-hero.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="48x48">
+  <link rel="icon" href="assets/brand/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon-180.png">
+
+  <!-- Open Graph / Twitter (absolute URLs: if you move to a custom domain, update these 3 lines) -->
+  <link rel="canonical" href="https://leonardo-henrique.github.io/corramelhorhoje/">
+  <meta property="og:url" content="https://leonardo-henrique.github.io/corramelhorhoje/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Corra Melhor Hoje">
+  <meta property="og:title" content="Do Zero aos 10 km · Guia de corrida com 3 planos | Corra Melhor Hoje">
+  <meta property="og:description" content="3 planos semana a semana pra correr 5 km sem parar, fazer 5 km em 30 minutos e chegar nos 10 km, sem se machucar.">
+  <meta property="og:image" content="https://leonardo-henrique.github.io/corramelhorhoje/assets/social/og-image-1200x630.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Capa do e-book Do Zero aos 10 km, da Corra Melhor Hoje">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Do Zero aos 10 km · Guia de corrida com 3 planos | Corra Melhor Hoje">
+  <meta name="twitter:description" content="3 planos semana a semana pra correr 5 km sem parar, fazer 5 km em 30 minutos e chegar nos 10 km, sem se machucar.">
+  <meta name="twitter:image" content="https://leonardo-henrique.github.io/corramelhorhoje/assets/social/og-image-1200x630.jpg">
+
+  <!-- ===== TikTok Pixel placeholder (paste the official snippet here; no real ID yet) =====
+  <script>
+    // TikTok Pixel code goes here — ttq.load('YOUR_PIXEL_ID'); ttq.page();
+  </script>
+  ======================================================================================= -->
+  <!-- ===== Meta (Facebook/Instagram) Pixel placeholder (paste the official snippet here) =====
+  <script>
+    // Meta Pixel code goes here — fbq('init', 'YOUR_PIXEL_ID'); fbq('track', 'PageView');
+  </script>
+  ========================================================================================= -->
+</head>
+<body>
+
+  <!-- Inline SVG icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.8l7.5 2.9v5.7c0 4.6-3.1 8.6-7.5 9.8-4.4-1.2-7.5-5.2-7.5-9.8V5.7L12 2.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8.4 12.2l2.5 2.5 4.8-4.9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3.5" y="8" width="17" height="4.5" rx="1"/><path d="M5 12.5V20h14v-7.5M12 8v12"/><path d="M12 8c-1.6-3.6-5.8-4-5.8-1.4C6.2 8 9 8 12 8zm0 0c1.6-3.6 5.8-4 5.8-1.4C17.8 8 15 8 12 8z"/></g></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-5.5-6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <!-- 0 · Top bar -->
+  <div class="topbar" role="note">
+    <p>
+      <strong>Preço de lançamento: <span class="anchor">de <s data-price-full>R$ 37</s> por </span><span data-price>R$ 27</span></strong><span class="topbar__extra"> · PDF na hora · Garantia de 7 dias</span>
+    </p>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <img src="assets/brand/logo-runner-128.webp" width="36" height="36" alt="Logo Corra Melhor Hoje: bonequinho correndo dentro de um círculo">
+      <span class="site-header__name">Corra Melhor Hoje</span>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1 · Hero -->
+    <section class="hero" id="topo" aria-labelledby="hero-title">
+      <div class="wrap hero__grid">
+        <p class="kicker hero__kicker">O MÉTODO COMPLETO · CORRA MELHOR HOJE</p>
+        <h1 class="hero__title" id="hero-title">
+          <span>DO ZERO</span>
+          <span class="hero__title-green">AOS 10 KM</span>
+        </h1>
+        <p class="hero__sub">Corra 5 km sem parar, faça 5 km em 30 minutos e chegue nos 10 km. Com 3 planos semana a semana, sem se machucar.</p>
+
+        <div class="hero__media">
+          <picture>
+            <source srcset="assets/ebook/ebook-mockup-hero.webp" type="image/webp">
+            <img class="hero__img" src="assets/ebook/ebook-mockup.png" width="700" height="550" fetchpriority="high" decoding="async"
+                 alt="E-book Do Zero aos 10 km e um celular mostrando uma página do guia, com o selo 50 páginas, 3 planos + bônus">
+          </picture>
+        </div>
+
+        <div class="hero__cta">
+          <a class="btn" data-cta="hero" href="https://pay.hotmart.com/P108588927X?src=hero"><span>QUERO MEU GUIA POR <span data-price>R$ 27</span></span></a>
+          <p class="micro-trust">PDF na hora · Garantia de 7 dias · Pagamento seguro Hotmart (Pix e cartão)</p>
+          <ul class="chips" aria-label="Os 3 planos do guia">
+            <li class="chip chip--green">PLANO 1 · 0 → 5 KM</li>
+            <li class="chip chip--yellow">PLANO 2 · SUB-30</li>
+            <li class="chip chip--red">PLANO 3 · 5 → 10 KM</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · Proof strip -->
+    <section class="proof" aria-label="Números do guia">
+      <ul class="wrap proof__list">
+        <li class="proof__item reveal"><strong class="proof__num">+1.000</strong> <span>corredores acompanham o @corramelhorhoje</span></li>
+        <li class="proof__item reveal"><strong class="proof__num">50</strong> <span>páginas com tabelas, planos e planners</span></li>
+        <li class="proof__item reveal"><strong class="proof__num">11</strong> <span>estudos científicos por trás do método</span></li>
+      </ul>
+    </section>
+
+    <!-- 3 · Plans -->
+    <section class="section section--cream" id="planos" aria-labelledby="planos-title">
+      <div class="wrap">
+        <h2 class="h2 reveal" id="planos-title">Qual plano é o seu?</h2>
+        <div class="plans">
+          <article class="plan plan--green reveal">
+            <p class="plan__label">PLANO 1 · 8 SEMANAS</p>
+            <h3 class="plan__title">Ainda não corre 5 km sem parar</h3>
+            <p class="plan__text">Começa alternando corrida e caminhada. Em 8 semanas, 5 km contínuos.</p>
+          </article>
+          <article class="plan plan--yellow reveal">
+            <p class="plan__label">PLANO 2 · 6 SEMANAS</p>
+            <h3 class="plan__title">Já corre 5 km, entre 32 e 36 min</h3>
+            <p class="plan__text">Tiros, treino leve e longão pra fazer os 5 km em 30 minutos.</p>
+          </article>
+          <article class="plan plan--red reveal">
+            <p class="plan__label">PLANO 3 · 10 SEMANAS</p>
+            <h3 class="plan__title">Já corre 5 km e quer os 10</h3>
+            <p class="plan__text">O longão cresce aos poucos, com semanas de recuperação, até os 10 km.</p>
+          </article>
+        </div>
+        <p class="plans__note reveal"><em>Começando do zero? Faça os três em sequência e, em cerca de 6 meses, você sai do sofá e corre 10 km.</em></p>
+      </div>
+    </section>
+
+    <!-- 4 · What's inside -->
+    <section class="section section--dark" id="dentro" aria-labelledby="dentro-title">
+      <div class="wrap">
+        <p class="kicker kicker--on-dark reveal">O que tem dentro</p>
+        <h2 class="h2 reveal" id="dentro-title">TUDO O QUE VOCÊ PRECISA, NUM LUGAR SÓ</h2>
+
+        <ul class="checklist reveal">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>3 planos completos, semana a semana, treino a treino</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Os 7 princípios que evitam lesão</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Tabela mestre de pace: km/h, 5 km, 10 km e 21 km</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Tabela da esteira e os 3 truques pra não sair rápido</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>6 exercícios de força pra fazer em casa, em 20 minutos</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>O que comer antes, durante e depois, e a verdade sobre o jejum</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>O semáforo da dor: quando seguir, reduzir ou parar</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Capítulo especial pra quem começou depois dos 40</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Estratégia de prova pro sub-30 e pros 10 km em 1 hora</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Checklist do dia da prova</li>
+          <li class="checklist__bonus"><svg class="ico" aria-hidden="true"><use href="#i-gift"/></svg><span><strong>Bônus:</strong> planners pra imprimir + tabela de pace de bolso</span></li>
+        </ul>
+
+        <h3 class="gallery__title reveal">VEJA POR DENTRO</h3>
+        <ul class="gallery" aria-label="Páginas de dentro do e-book (arraste para o lado)">
+          <li class="gallery__item">
+            <figure>
+              <picture>
+                <source srcset="assets/pages/qual-plano-e-o-seu-600.webp" type="image/webp">
+                <img src="assets/pages/qual-plano-e-o-seu.png" width="600" height="849" loading="lazy" decoding="async"
+                     alt="Página do e-book: teste &quot;Qual plano é o seu?&quot; com 3 perguntas">
+              </picture>
+              <figcaption>Descubra seu plano em 3 perguntas</figcaption>
+            </figure>
+          </li>
+          <li class="gallery__item">
+            <figure>
+              <picture>
+                <source srcset="assets/pages/plano-1-semanas-1-4-600.webp" type="image/webp">
+                <img src="assets/pages/plano-1-semanas-1-4.png" width="600" height="849" loading="lazy" decoding="async"
+                     alt="Página do e-book: tabela do Plano 1, semanas 1 a 4, com cada treino">
+              </picture>
+              <figcaption>Treino a treino, sem dúvida</figcaption>
+            </figure>
+          </li>
+          <li class="gallery__item">
+            <figure>
+              <picture>
+                <source srcset="assets/pages/tabela-de-pace-600.webp" type="image/webp">
+                <img src="assets/pages/tabela-de-pace.png" width="600" height="849" loading="lazy" decoding="async"
+                     alt="Página do e-book: tabela mestre de pace, velocidade e tempo de prova para 5, 10 e 21 km">
+              </picture>
+              <figcaption>A tabela que você vai consultar pra sempre</figcaption>
+            </figure>
+          </li>
+          <li class="gallery__item">
+            <figure>
+              <picture>
+                <source srcset="assets/pages/plano-2-sub-30-600.webp" type="image/webp">
+                <img src="assets/pages/plano-2-sub-30.png" width="600" height="849" loading="lazy" decoding="async"
+                     alt="Página do e-book: Plano 2, o caminho para correr 5 km em menos de 30 minutos">
+              </picture>
+              <figcaption>O caminho pro sub-30</figcaption>
+            </figure>
+          </li>
+          <li class="gallery__item">
+            <figure>
+              <picture>
+                <source srcset="assets/pages/forca-6-exercicios-600.webp" type="image/webp">
+                <img src="assets/pages/forca-6-exercicios.png" width="600" height="849" loading="lazy" decoding="async"
+                     alt="Página do e-book: 6 exercícios de força para fazer em casa">
+              </picture>
+              <figcaption>Força que protege o joelho</figcaption>
+            </figure>
+          </li>
+          <li class="gallery__item">
+            <figure>
+              <picture>
+                <source srcset="assets/pages/semaforo-da-dor-600.webp" type="image/webp">
+                <img src="assets/pages/semaforo-da-dor.png" width="600" height="849" loading="lazy" decoding="async"
+                     alt="Página do e-book: semáforo da dor, quando seguir, reduzir ou parar o treino">
+              </picture>
+              <figcaption>Saiba quando parar</figcaption>
+            </figure>
+          </li>
+        </ul>
+
+        <div class="center reveal">
+          <a class="btn btn--wide" data-cta="gallery" href="https://pay.hotmart.com/P108588927X?src=gallery">QUERO O GUIA COMPLETO <svg class="ico ico--btn" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · Why it works -->
+    <section class="section section--cream" id="ciencia" aria-labelledby="ciencia-title">
+      <div class="wrap">
+        <p class="kicker reveal">Por que funciona</p>
+        <h2 class="h2 reveal" id="ciencia-title">BASEADO EM CIÊNCIA, ESCRITO PRA GENTE NORMAL</h2>
+        <div class="science">
+          <article class="sci reveal">
+            <p class="sci__num">5.205 corredores</p>
+            <p class="sci__text">Um estudo de 18 meses mostrou que saltos grandes no treino mais longo aumentam o risco de lesão. Os planos crescem em passos pequenos.</p>
+            <p class="sci__src"><em>(British Journal of Sports Medicine, 2025)</em></p>
+          </article>
+          <article class="sci reveal">
+            <p class="sci__num">Menos de 1/3</p>
+            <p class="sci__text">Na revisão de 25 estudos, o treino de força reduziu as lesões esportivas para menos de um terço. Por isso o guia tem um capítulo de força.</p>
+            <p class="sci__src"><em>(BJSM, 2014)</em></p>
+          </article>
+          <article class="sci reveal">
+            <p class="sci__num">3,5% vs 10,2%</p>
+            <p class="sci__text">Quem corre por lazer teve menos artrose no joelho e quadril do que quem não se exercita. Correr do jeito certo protege.</p>
+            <p class="sci__src"><em>(JOSPT, 2017)</em></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUTURE SECTION: "Quem já comprou" (real testimonials only — add here once real buyers send feedback. Never invent reviews.) -->
+
+    <!-- 6 · Price box -->
+    <section class="section section--dark buy" id="comprar" aria-labelledby="comprar-title">
+      <div class="wrap">
+        <div class="pricebox reveal">
+          <div class="pricebox__cover">
+            <picture>
+              <source srcset="assets/ebook/ebook-cover-620.webp" type="image/webp">
+              <img src="assets/ebook/ebook-cover.png" width="620" height="877" loading="lazy" decoding="async"
+                   alt="Capa do e-book Do Zero aos 10 km, com o bonequinho correndo">
+            </picture>
+          </div>
+          <div class="pricebox__body">
+            <p class="kicker kicker--red">OFERTA DE LANÇAMENTO</p>
+            <h2 class="pricebox__title" id="comprar-title">DO ZERO AOS 10 KM</h2>
+            <ul class="pricebox__list">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>3 planos completos</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Tabelas de pace e esteira</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Treino de força</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Alimentação e dor</li>
+              <li><svg class="ico ico--gift" aria-hidden="true"><use href="#i-gift"/></svg>Bônus: planners pra imprimir</li>
+            </ul>
+            <div class="price">
+              <p class="price__anchor anchor"><span class="sr-only">De </span><s data-price-full>R$ 37</s><span class="sr-only"> por</span></p>
+              <p class="price__value" data-price>R$ 27</p>
+              <p class="price__note">pagamento único, acesso pra sempre</p>
+            </div>
+            <a class="btn btn--xl" data-cta="price" href="https://pay.hotmart.com/P108588927X?src=price">QUERO MEU GUIA AGORA</a>
+            <p class="pricebox__small">Pix ou cartão · PDF no seu e-mail na hora · Leia no celular ou imprima</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 · Guarantee -->
+    <section class="section section--cream guarantee-wrap" id="garantia" aria-labelledby="garantia-title">
+      <div class="wrap">
+        <div class="guarantee reveal">
+          <div class="guarantee__icon"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg></div>
+          <div>
+            <h2 class="guarantee__title" id="garantia-title">GARANTIA DE 7 DIAS</h2>
+            <p>Comprou, leu e achou que não é pra você? Peça o reembolso em até 7 dias direto pela Hotmart. Sem perguntas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 · FAQ -->
+    <section class="section section--cream faq-wrap" id="faq" aria-labelledby="faq-title">
+      <div class="wrap wrap--narrow">
+        <h2 class="h2 reveal" id="faq-title">FAQ</h2>
+        <div class="faq">
+          <details>
+            <summary>Como recebo o guia?</summary>
+            <p>Logo após a confirmação do pagamento, a Hotmart envia o acesso ao PDF por e-mail. No Pix, costuma ser na hora.</p>
+          </details>
+          <details>
+            <summary>Serve pra quem nunca correu?</summary>
+            <p>Sim. O Plano 1 começa alternando corrida e caminhada, do zero.</p>
+          </details>
+          <details>
+            <summary>E se eu já corro?</summary>
+            <p>Os Planos 2 e 3 são pra quem já corre 5 km e quer baixar o tempo ou chegar nos 10 km.</p>
+          </details>
+          <details>
+            <summary>Tenho mais de 40 anos. Serve pra mim?</summary>
+            <p>Sim, e tem um capítulo só sobre isso. Se você está parado há muito tempo ou tem alguma condição de saúde, passe no médico antes de começar.</p>
+          </details>
+          <details>
+            <summary>Preciso de relógio ou esteira?</summary>
+            <p>Não. Um app grátis no celular resolve, e todos os planos funcionam na rua ou na esteira.</p>
+          </details>
+          <details>
+            <summary>Posso ler no celular?</summary>
+            <p>Sim. O PDF foi feito pra ler no celular, e os planners são pra imprimir.</p>
+          </details>
+          <details>
+            <summary>E se eu não gostar?</summary>
+            <p>Você tem 7 dias de garantia para pedir reembolso.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 · Final CTA -->
+    <section class="section section--dark final" id="final" aria-labelledby="final-title">
+      <div class="wrap center">
+        <h2 class="final__title reveal" id="final-title">O PRIMEIRO TREINO PODE SER HOJE.</h2>
+        <p class="final__sub reveal">Você já sabe o que fazer. Agora tem o plano.</p>
+        <div class="reveal">
+          <a class="btn btn--wide" data-cta="final" href="https://pay.hotmart.com/P108588927X?src=final"><span>QUERO MEU GUIA POR <span data-price>R$ 27</span></span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 10 · Footer -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <img src="assets/brand/logo-runner-128.webp" width="44" height="44" loading="lazy" decoding="async" alt="Logo Corra Melhor Hoje">
+        <span>Corra Melhor Hoje</span>
+      </div>
+      <nav class="footer__links" aria-label="Redes sociais">
+        <a data-link="TIKTOK_URL" href="https://www.tiktok.com/@corramelhorhoje" rel="noopener">TikTok</a>
+        <span aria-hidden="true">·</span>
+        <a data-link="INSTAGRAM_URL" href="https://www.instagram.com/corramelhorhoje" rel="noopener">Instagram</a>
+        <span aria-hidden="true">·</span>
+        <a data-link="YOUTUBE_URL" href="https://www.youtube.com/@corramelhorhoje" rel="noopener">YouTube</a>
+      </nav>
+      <p class="footer__disclaimer"><em>Material educativo. Não substitui avaliação médica nem acompanhamento profissional.</em></p>
+      <p class="footer__copy">© 2026 Corra Melhor Hoje · Pagamento processado pela Hotmart.</p>
+    </div>
+  </footer>
+
+  <!-- Sticky mobile CTA -->
+  <div class="sticky-cta" aria-hidden="true">
+    <div class="sticky-cta__price">
+      <strong data-price>R$ 27</strong>
+      <span>PDF na hora</span>
+    </div>
+    <a class="btn btn--sm" data-cta="sticky" href="https://pay.hotmart.com/P108588927X?src=sticky" tabindex="-1">QUERO O GUIA</a>
+  </div>
+
+  <script>
+  (function () {
+    var C = window.CONFIG, d = document;
+    function all(sel) { return Array.prototype.slice.call(d.querySelectorAll(sel)); }
+
+    /* Prices */
+    all("[data-price]").forEach(function (el) { el.textContent = C.PRICE; });
+    all("[data-price-full]").forEach(function (el) { el.textContent = C.PRICE_FULL; });
+
+    /* Social links */
+    all("[data-link]").forEach(function (a) { if (C[a.dataset.link]) a.href = C[a.dataset.link]; });
+
+    /* Checkout links: ?src=<position> + pass through utm_* from this page's URL */
+    var utm = [];
+    try {
+      new URLSearchParams(location.search).forEach(function (v, k) { if (/^utm_/i.test(k)) utm.push([k, v]); });
+    } catch (e) {}
+    all("[data-cta]").forEach(function (a) {
+      try {
+        var u = new URL(C.CHECKOUT_URL);
+        u.searchParams.set("src", a.dataset.cta);
+        utm.forEach(function (p) { u.searchParams.set(p[0], p[1]); });
+        a.href = u.toString();
+      } catch (e) {}
+    });
+
+    if (!("IntersectionObserver" in window)) {
+      all(".reveal").forEach(function (el) { el.classList.add("in"); });
+      return;
+    }
+
+    /* Sticky mobile CTA: show after the hero leaves; hide while the price box or final CTA is on screen */
+    var bar = d.querySelector(".sticky-cta"), hero = d.getElementById("topo");
+    var heroGone = false, closers = {};
+    function update() {
+      var closerVisible = closers.comprar || closers.final;
+      var show = heroGone && !closerVisible;
+      bar.classList.toggle("is-visible", show);
+      bar.setAttribute("aria-hidden", show ? "false" : "true");
+      bar.querySelector("a").tabIndex = show ? 0 : -1;
+    }
+    new IntersectionObserver(function (es) {
+      es.forEach(function (e) { heroGone = !e.isIntersecting && e.boundingClientRect.top < 0; });
+      update();
+    }).observe(hero);
+    var closerIO = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { closers[e.target.id] = e.isIntersecting; });
+      update();
+    }, { threshold: 0.25 });
+    ["comprar", "final"].forEach(function (id) { var el = d.getElementById(id); if (el) closerIO.observe(el); });
+
+    /* Reveal on scroll */
+    var revealIO = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("in"); revealIO.unobserve(e.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px" });
+    all(".reveal").forEach(function (el) { revealIO.observe(el); });
+  })();
+  </script>
+</body>
+</html>
